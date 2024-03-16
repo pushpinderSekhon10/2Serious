@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float health = 3;
 
     [Header("Combat")]
-    [SerializeField] float attackCD = 3f;
+    [SerializeField] float attackCD = 1f;
     [SerializeField] float attackRange = 1f;
     [SerializeField] float aggroRange = 4f;
 
@@ -19,12 +19,14 @@ public class Enemy : MonoBehaviour
     float timePassed;
     float newDestinationCD = 0.5f;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        //agent.SetDestination(player.transform.position);
     }
 
     public void TakeDamage(float damageAmount)
@@ -42,19 +44,24 @@ public class Enemy : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
-    // Update is called once per frame
+   
     void Update()
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-
+        
         if (timePassed >= attackCD)
         {
+            //Debug.Log("Distance to player: " + Vector3.Distance(player.transform.position, transform.position));
+
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
+                Debug.Log("attack");
                 animator.SetTrigger("attack");
                 timePassed = 0;
+                
             }
         }
+        
         timePassed += Time.deltaTime;
 
 
@@ -62,7 +69,9 @@ public class Enemy : MonoBehaviour
         {
             newDestinationCD = 0.5f;
             agent.SetDestination(player.transform.position);
+            
         }
+
         newDestinationCD -= Time.deltaTime;
         transform.LookAt(player.transform);
     }
