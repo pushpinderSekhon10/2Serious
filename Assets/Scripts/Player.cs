@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     Vector3 moveInput;
 
-    public float moveSpeed = 0.05f;
+    public float moveSpeed = 0.005f;
 
     void Start()
     {
