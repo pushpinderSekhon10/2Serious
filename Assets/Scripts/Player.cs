@@ -1,26 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    CharacterController controller;
+    public float moveSpeed = 5f; 
+    public InputActionAsset inputActions; 
+    private InputAction moveAction;
+    private Vector2 currentMovementInput;
 
-    Vector3 moveInput;
-
-    public float moveSpeed = 0.05f;
-
-    void Start()
+    private void Awake()
     {
-        controller = GetComponent<CharacterController>();
+        // Initialize the move action
+        var playerControls = inputActions.FindActionMap("movement");
+        moveAction = playerControls.FindAction("Move");
+
+        // Capture the movement input
+        moveAction.performed += ctx => currentMovementInput = ctx.ReadValue<Vector2>();
+        moveAction.canceled += ctx => currentMovementInput = Vector2.zero;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        moveInput.x = Input.GetAxis("Horizontal") * moveSpeed;
-        moveInput.z = Input.GetAxis("Vertical") * moveSpeed;
+        moveAction.Enable();
+    }
 
-        controller.Move(moveInput);
+    private void OnDisable()
+    {
+        moveAction.Disable();
+    }
+
+    private void Update()
+    {
+        // Apply the movement input to the character's position
+        Vector3 movement = new Vector3(currentMovementInput.x, 0, currentMovementInput.y) * moveSpeed * Time.deltaTime;
+        transform.Translate(movement);
     }
 }
