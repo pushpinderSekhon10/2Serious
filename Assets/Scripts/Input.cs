@@ -91,6 +91,8 @@ public class Example : MonoBehaviour
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotSpeed * Time.deltaTime);
         }
+        Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(0, cameraRotation.y, 0);
     }
 
     private void OnApplicationFocus(bool focus)
