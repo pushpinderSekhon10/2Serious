@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         // Initialize the move action
-        var playerControls = inputActions.FindActionMap("movement");
-        moveAction = playerControls.FindAction("Move");
+        var playerControls = inputActions.FindActionMap("player");
+        moveAction = playerControls.FindAction("move");
 
         // Capture the movement input
         moveAction.performed += ctx => currentMovementInput = ctx.ReadValue<Vector2>();

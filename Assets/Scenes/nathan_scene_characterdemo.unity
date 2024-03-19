@@ -1403,7 +1403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820207840}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13538747, y: 0.77996844, z: -0.18094514, w: 0.583591}
+  m_LocalRotation: {x: 0.13538745, y: 0.77996844, z: -0.18094513, w: 0.583591}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943065785}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -1576,7 +1576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4337e22ca71b7804a9bd2691034be8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!65 &1943065794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1612,16 +1611,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   inputActions: {fileID: -944628639613478452, guid: 129b18c37b6b0094b9bdf57a01f1790e, type: 3}
-  moveAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 7d52cf60-fce3-4bb0-ac6b-62304f29d84b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  currentMovementInput: {x: 0, y: 0}
 --- !u!114 &1943065797
 MonoBehaviour:
   m_ObjectHideFlags: 0
