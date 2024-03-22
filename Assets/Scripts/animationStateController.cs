@@ -8,6 +8,8 @@ public class animationStateController : MonoBehaviour
     int isWalking;
     int isAttacking;
     int isRunning;
+    [SerializeField] GameObject weapon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +60,16 @@ public class animationStateController : MonoBehaviour
 
         }
 
+    }
 
+    public void StartDealDamage()
+    {
+        weapon.GetComponentInChildren<DamageDealer>().StartDealDamage();
 
+    }
 
+    public void EndDealDamage()
+    {
+        weapon.GetComponent<DamageDealer>().EndDealDamage();
     }
 }
