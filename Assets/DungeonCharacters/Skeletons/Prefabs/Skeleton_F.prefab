@@ -2175,6 +2175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  weapon: {fileID: 0}
   attackCD: 1
   attackRange: 2
   aggroRange: 4
@@ -2712,13 +2713,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861250509044215869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0043783817, y: -0.70723975, z: -0.70694673, w: 0.004376559}
+  m_LocalPosition: {x: 0.005, y: 0.012, z: 0.805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 414932}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -179.291}
 --- !u!114 &87932519154862679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2731,5 +2732,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fd687de6a1604099a6125b24fc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponLength: 0
-  weaponDamage: 0
+  weaponLength: 1.06
+  weaponDamage: 1
