@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
 
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 animator.SetTrigger("attack");
                 timePassed = 0;
                 
