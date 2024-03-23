@@ -6,11 +6,13 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 3;
+    [SerializeField] GameObject weapon;
 
     [Header("Combat")]
     [SerializeField] float attackCD = 1f;
     [SerializeField] float attackRange = 1f;
     [SerializeField] float aggroRange = 4f;
+
 
     GameObject player;
     NavMeshAgent agent;
@@ -34,7 +36,7 @@ public class Enemy : MonoBehaviour
         health -= damageAmount;
         animator.SetTrigger("damage");
 
-        if (health <-0)
+        if (health <= 0)
         {
             Die();
         }
@@ -55,7 +57,7 @@ public class Enemy : MonoBehaviour
 
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 animator.SetTrigger("attack");
                 timePassed = 0;
                 
@@ -74,6 +76,16 @@ public class Enemy : MonoBehaviour
 
         newDestinationCD -= Time.deltaTime;
         transform.LookAt(player.transform);
+    }
+
+    public void StartDealDamage()
+    {
+        weapon.GetComponentInChildren<EnemyDamageDealer>().StartDealDamage();
+    }
+
+    public void EndDealDamage()
+    {
+        weapon.GetComponentInChildren<EnemyDamageDealer>().EndDealDamage();
     }
 
     private void OnDrawGizmos()

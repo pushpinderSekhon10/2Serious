@@ -1379,7 +1379,8 @@ Transform:
   m_LocalPosition: {x: 0.044941116, y: -0.0053894967, z: -0.00004682854}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4037946626860909301}
   m_Father: {fileID: 463808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3345740
@@ -2453,3 +2454,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5682157416015520487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4037946626860909301}
+  - component: {fileID: 8119431781252147774}
+  m_Layer: 0
+  m_Name: DamageDealer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4037946626860909301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682157416015520487}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.45906305, y: -0.5158477, z: -0.5414001, w: 0.47963345}
+  m_LocalPosition: {x: -0.152, y: 0.001, z: 0.513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 444136}
+  m_LocalEulerAnglesHint: {x: -6.788, y: -87.326, z: -90.445}
+--- !u!114 &8119431781252147774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682157416015520487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d7966f8ecfd9949a1b03505ab5b8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponLength: 0.75
+  weaponDamage: 0
