@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121456071}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11480649, y: 0.000000034727204, z: -0.0000000040134456, w: 0.9933879}
+  m_LocalRotation: {x: 0.11480653, y: -0.000000034727197, z: 0.0000000040134465, w: 0.9933879}
   m_LocalPosition: {x: -5.9051085, y: 9.544495, z: -22.393747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -448,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193263963}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0967183, y: -0.00000001765278, z: 0.0000000017153888, w: 0.9953118}
+  m_LocalRotation: {x: 0.0967183, y: 0.000000017652784, z: -0.0000000017153893, w: 0.9953118}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -734,6 +734,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: eb804961e48cf5045b7fa59fcaea8c16, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &499021093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 861250509044215869, guid: 3a367ca1b4f5a1a47bda6e98e7ba1f43, type: 3}
+  m_PrefabInstance: {fileID: 1429153233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651393173
 GameObject:
   m_ObjectHideFlags: 3
@@ -805,7 +810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651393173}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.114806496, y: 0.000000018152315, z: -0.000000002097875, w: 0.9933879}
+  m_LocalRotation: {x: 0.11480652, y: -0.000000016574887, z: 0.0000000019155713, w: 0.9933879}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1253,6 +1258,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee5e50c69f7681a40b61e11b4379c94c, type: 2}
+    - target: {fileID: 914073783595754023, guid: e967c42ede832ae4d964d682b25ec538, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 499021093}
     - target: {fileID: 5192333027924695663, guid: e967c42ede832ae4d964d682b25ec538, type: 3}
       propertyPath: m_StoppingDistance
       value: 1
@@ -1374,6 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  weapon: {fileID: 499021093}
   attackCD: 1
   attackRange: 1
   aggroRange: 4
@@ -1841,6 +1851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4337e22ca71b7804a9bd2691034be8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
 --- !u!195 &1424551222
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2155,6 +2166,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee5e50c69f7681a40b61e11b4379c94c, type: 2}
+    - target: {fileID: 1757217415458879881, guid: 3a367ca1b4f5a1a47bda6e98e7ba1f43, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 499021093}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2184,6 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  weapon: {fileID: 499021093}
   attackCD: 1
   attackRange: 1
   aggroRange: 4
