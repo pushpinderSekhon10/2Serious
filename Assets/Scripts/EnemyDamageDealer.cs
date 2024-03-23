@@ -19,7 +19,7 @@ public class EnemyDamageDealer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("in here");
+        
         if (canDealDamage && !hasDealDamage)
         {
             RaycastHit hit;
@@ -35,8 +35,8 @@ public class EnemyDamageDealer : MonoBehaviour
 
     public void StartDealDamage()
     {
-        canDealDamage = false;
-        hasDealDamage = true;
+        canDealDamage = true;
+        hasDealDamage = false;
     }
 
     public void EndDealDamage()
