@@ -8,6 +8,7 @@ public class animationStateController : MonoBehaviour
     int isWalking;
     int isAttacking;
     int isRunning;
+    int isStrafing;
     [SerializeField] GameObject weapon;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class animationStateController : MonoBehaviour
         isWalking = Animator.StringToHash("walk");
         isAttacking = Animator.StringToHash("attack");
         isRunning = Animator.StringToHash("run");
+        isStrafing = Animator.StringToHash("strafe");
     }
 
     // Update is called once per frame
@@ -25,9 +27,12 @@ public class animationStateController : MonoBehaviour
         bool walking = animator.GetBool(isWalking);
         bool attacking = animator.GetBool(isAttacking);
         bool running = animator.GetBool(isRunning);
+        bool strafing = animator.GetBool(isStrafing);
         bool walk = Input.GetKey("s");
         bool attack = Input.GetKey("q");
         bool run = Input.GetKey("w");
+        bool strafe = Input.GetKey("a");
+        bool strafe2 = Input.GetKey("d");
 
         if (!walking && walk)
         {
@@ -58,6 +63,24 @@ public class animationStateController : MonoBehaviour
         {
             animator.SetBool(isRunning, false);
 
+        }
+        if (!strafing && strafe)
+        {
+            animator.SetBool(isWalking, true);
+        }
+
+        if (strafing && !strafe)
+        {
+            animator.SetBool(isWalking, false);
+        }
+        if (!strafing && strafe2)
+        {
+            animator.SetBool(isWalking, true);
+        }
+
+        if (strafing && !strafe2)
+        {
+            animator.SetBool(isWalking, false);
         }
 
     }
