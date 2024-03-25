@@ -23,12 +23,17 @@ public class EnemyDamageDealer : MonoBehaviour
         if (canDealDamage && !hasDealDamage)
         {
             RaycastHit hit;
-            int layerMask = 1 << 8;
+            int layerMask = 1 << 8;//selecting the 8th layer which is the "player" layer
             
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-                print("enemy has done damage");
-                hasDealDamage = true;
+                if (hit.transform.TryGetComponent(out HealthSystem health))
+                {
+                    health.TakeDamage(weaponDamage);
+                    hasDealDamage = true;
+
+                }
+                
             }
         }
     }
