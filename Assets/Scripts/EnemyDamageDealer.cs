@@ -27,10 +27,13 @@ public class EnemyDamageDealer : MonoBehaviour
             
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
+                //Debug.Log("in here");
                 if (hit.transform.TryGetComponent(out HealthSystem health))
                 {
+
                     health.TakeDamage(weaponDamage);
                     hasDealDamage = true;
+                    //Debug.Log("damage");
 
                 }
                 

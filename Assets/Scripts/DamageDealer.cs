@@ -20,13 +20,14 @@ public class DamageDealer : MonoBehaviour
     {
         if (canDealDamage)
         {
-            //Debug.Log("in here");
+            //Debug.Log("hi");
+            
             RaycastHit hit;
 
             int layerMask = 1 << 9;
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-
+                //Debug.Log("in here");
                 if (hit.transform.TryGetComponent(out Enemy enemy) && !hasDealtDamage.Contains(hit.transform.gameObject))
                 {
                     print("damage");
