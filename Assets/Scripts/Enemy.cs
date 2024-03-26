@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,15 +43,36 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        
+        animator.SetTrigger("death");
+        
+        GetComponent<CapsuleCollider>().enabled = false;
+        
+        agent.isStopped = true;
+        agent.SetDestination(transform.position);
+        
+        enabled = false;
+
+        EnemyDamageDealer damageDealer = weapon.GetComponentInChildren<EnemyDamageDealer>();
+        damageDealer.enabled = false;
+        
+
+
     }
    
     void Update()
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
         
+
+        if (player == null)
+        {
+            return;
+        }
+
         if (timePassed >= attackCD)
         {
             //Debug.Log("Distance to player: " + Vector3.Distance(player.transform.position, transform.position));
@@ -60,6 +82,7 @@ public class Enemy : MonoBehaviour
                 //Debug.Log("attack");
                 animator.SetTrigger("attack");
                 timePassed = 0;
+
                 
             }
         }
