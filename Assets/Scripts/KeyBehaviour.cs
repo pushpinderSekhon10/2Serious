@@ -16,10 +16,13 @@ public class KeyBehaviour : PurchaseBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            updateResource();
+        }
     }
 
-    public override void OnPointerClick(PointerEventData eventData)
+    public override void updateResource()
     {
         Debug.Log("Hello");
         player.currentDamage += 30;

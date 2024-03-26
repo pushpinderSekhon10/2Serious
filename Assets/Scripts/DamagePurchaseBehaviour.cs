@@ -17,10 +17,13 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            updateResource();
+        }
     }
 
-    public override void OnPointerClick(PointerEventData eventData)
+    public override void updateResource()
     {
         if (player.score >= 10)
         {
