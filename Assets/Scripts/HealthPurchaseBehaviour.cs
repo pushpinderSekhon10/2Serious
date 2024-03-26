@@ -23,20 +23,25 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
     {
         if (player.score >= 10)
         {
-
-            player.score -= 10;
-            player.healthCapacity += 10;
-            player.numHealthIncreases++;
-            if (player.numHealthIncreases < 2)
+            if (player.currentHealth + 10 <= player.healthCapacity)
             {
-                player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increase Purchased";
+                player.score -= 10;
+                player.currentHealth += 10;
+                player.numHealthIncreases++;
+                if (player.numHealthIncreases < 2)
+                {
+                    player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increase Purchased";
+                }
+                else
+                {
+                    player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increases Purchased!";
+                }
+                //player.displayHealthCapacity.text = player.healthCapacity.ToString();
+                //player.displayScore.text = player.score.ToString();
             }
-            else
-            {
-                player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increases Purchased!";
+            else {
+                player.shopHeader.text = "Health too high!";
             }
-            //player.displayHealthCapacity.text = player.healthCapacity.ToString();
-            //player.displayScore.text = player.score.ToString();
         }
         else
         {

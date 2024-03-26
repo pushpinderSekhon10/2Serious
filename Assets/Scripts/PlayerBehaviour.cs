@@ -23,7 +23,7 @@ public class PlayerBehaviour : ResourceManager
         score = 0;
         xpPoints = 0;
         healthCapacity = 100;
-        currentHealth = healthCapacity;
+        currentHealth = 70;
         currentDamage = 25;
 
     }
