@@ -1,1 +1,6 @@
 1. Create GameObjects for player, coins, xp source.
+2. Add Character Controller to player and Rigidbody physics component to objects collected by collision (adjust colliders as necessary).
+3. Add tags to each object to recognize when collision on trigger has been activated
+4. Create ResourceManager script with corresponding player attributes (score, xp, currentHealth, healthCapacity, damage per attack).
+5. Create player script which inherits resource manager and add methods to detect collision/proximity events and update corresponding resource.
+6. Create scripts for each type of object (ex. collisionCoins, proximityCoins, XPSource) and write methods to detect when event activated based on event with player and destroy collected object.
