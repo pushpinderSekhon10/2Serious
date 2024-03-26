@@ -4,3 +4,4 @@
 4. Create ResourceManager script with corresponding player attributes (score, xp, currentHealth, healthCapacity, damage per attack).
 5. Create player script which inherits resource manager and add methods to detect collision/proximity events and update corresponding resource.
 6. Create scripts for each type of object (ex. collisionCoins, proximityCoins, XPSource) and write methods to detect when event activated based on event with player and destroy collected object.
+7. Add a method to generate a random x, y, and z coordinate for the object to be positioned at when the game starts. Call another IsPositionOccupied method within the location generation method in a loop to regenerate w new location while the current one is occupied until an empty location is found. Call this generate location method in the start method.
