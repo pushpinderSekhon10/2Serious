@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XPSourceBehaviour : MonoBehaviour
 {
-    public static int value = 10;
+    public static int value = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,12 @@ public class XPSourceBehaviour : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "DemoPlayer") {
+        if (other.CompareTag("DemoPlayer"))
+        {
             Destroy(gameObject);
         }
     }
+
 }
