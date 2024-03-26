@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,15 @@ public class PlayerBehaviour : ResourceManager
     public float moveSpeed = 0.5f;
     Vector3 movePos;
 
+    public GameObject shopPanel;
+    public TMP_Text shopHeader;
+    public int numHealthIncreases = 0, numDamageIncreases = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        shopPanel.SetActive(false);
 
         score = 0;
         xpPoints = 0;
@@ -29,11 +35,12 @@ public class PlayerBehaviour : ResourceManager
         movePos.z = Input.GetAxis("Vertical") * moveSpeed;
         controller.Move(movePos);
 
-        //if (Input.GetKeyDown(KeyCode.Return))
-        //{
-        //    ToggleShopPanel();
-        //}
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ToggleShopPanel();
+            numDamageIncreases = 0;
+            numHealthIncreases = 0;
+        }
 
     }
 
@@ -58,12 +65,9 @@ public class PlayerBehaviour : ResourceManager
         }
     }
 
-    //void ToggleShopPanel() {
-    //    if (SceneManager.GetActiveScene().name == "Market") {
-    //        SceneManager.LoadScene("PurchaseMenu");
-    //    } else if (SceneManager.GetActiveScene().name == "PurchaseMenu")
-    //    {
-    //        SceneManager.LoadScene("Market");
-    //    }
-    //}
+    void ToggleShopPanel()
+    {
+        shopPanel.SetActive(!shopPanel.activeSelf);
+        shopHeader.text = "Quick Purchase Menu";
+    }
 }

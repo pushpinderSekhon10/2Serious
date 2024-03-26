@@ -8,6 +8,8 @@ TagManager:
   - ProximityCoin
   - XPSource
   - CollisionCoin
+  - AnimTag
+  - Enemy
   layers:
   - Default
   - TransparentFX
