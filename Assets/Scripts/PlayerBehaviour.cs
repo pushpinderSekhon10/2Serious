@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : ResourceManager
 {
     CharacterController controller;
     public float moveSpeed = 0.5f;
     Vector3 movePos;
-
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,13 @@ public class PlayerBehaviour : ResourceManager
         movePos.x = Input.GetAxis("Horizontal") * moveSpeed;
         movePos.z = Input.GetAxis("Vertical") * moveSpeed;
         controller.Move(movePos);
+
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    ToggleShopPanel();
+        //}
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -51,4 +58,12 @@ public class PlayerBehaviour : ResourceManager
         }
     }
 
+    //void ToggleShopPanel() {
+    //    if (SceneManager.GetActiveScene().name == "Market") {
+    //        SceneManager.LoadScene("PurchaseMenu");
+    //    } else if (SceneManager.GetActiveScene().name == "PurchaseMenu")
+    //    {
+    //        SceneManager.LoadScene("Market");
+    //    }
+    //}
 }

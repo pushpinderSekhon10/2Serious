@@ -6,12 +6,28 @@ using UnityEngine;
 public class ProximityCoinBehaviour : MonoBehaviour
 {
     public static int value = 7;
+    public GameObject proximityCoinPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        transform.position = GeneratePosition();
+        for (int i = 0; i < 5; i++)
+        {
+            // Generate a random position for each coin
+            Vector3 randomPosition = GeneratePosition();
+
+            // Instantiate the coin at the random position
+            Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(90f, 0f, 0f));
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            // Generate a random position for each coin
+            Vector3 randomPosition = GeneratePosition();
+
+            // Instantiate the coin at the random position
+            Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(0f, 0f, 90f));
+        }
 
     }
 
@@ -50,7 +66,7 @@ public class ProximityCoinBehaviour : MonoBehaviour
 
     bool IsPositionOccupied(Vector3 position)
     {
-        Collider[] colliders = Physics.OverlapSphere(position, 0.1f);
+        Collider[] colliders = Physics.OverlapSphere(position, 0.5f);
         return colliders.Length > 0;
     }
 
