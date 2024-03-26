@@ -1,0 +1,16 @@
+Collectibles:
+1. Create GameObjects for player, coins, xp source.
+2. Add Character Controller to player and Rigidbody physics component to objects collected by collision (adjust colliders as necessary).
+3. Add tags to each object to recognize when collision on trigger has been activated
+4. Create ResourceManager script with corresponding player attributes (score, xp, currentHealth, healthCapacity, damage per attack).
+5. Create player script which inherits resource manager and add methods to detect collision/proximity events and update corresponding resource.
+6. Create scripts for each type of object (ex. collisionCoins, proximityCoins, XPSource) and write methods to detect when event activated based on event with player and destroy collected object.
+7. Add a method to generate a random x, y, and z coordinate for the object to be positioned at when the game starts. Call another IsPositionOccupied method within the location generation method in a loop to regenerate w new location while the current one is occupied until an empty location is found. Call this generate location method in the start method.
+
+
+Shop:
+8. Create a panel (should automatically create a canvas if not already there) named Shop. 
+9. Under canvas -> UI Scalar, set UI Scale mode to Scale with screen size so UI elements scaled for different screen sizes, set reference resolution x to 1920 y to 1080, im pretty sure thats what the TA said we couuld use as reference
+10. 
+
+*** Need to add Physics Raycaster for iPointerClick on 3D GameObjects
