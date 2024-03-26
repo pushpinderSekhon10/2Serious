@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class PurchaseBehaviour : MonoBehaviour, IPointerClickHandler
+public abstract class PurchaseBehaviour : MonoBehaviour
 {
     public PlayerBehaviour player;
     //public TMP_Text displayScore;
@@ -21,5 +21,5 @@ public abstract class PurchaseBehaviour : MonoBehaviour, IPointerClickHandler
 
     }
 
-    public abstract void OnPointerClick(PointerEventData eventData);
+    public abstract void updateResource();
 }

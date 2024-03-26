@@ -14,12 +14,15 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            updateResource();
+        }
     }
 
     //public TMP_Text displayHealthCapacity;
 
-    public override void OnPointerClick(PointerEventData eventData)
+    public override void updateResource()
     {
         if (player.score >= 10)
         {
