@@ -31,9 +31,9 @@ public class PlayerBehaviour : ResourceManager
     // Update is called once per frame
     void Update()
     {
-        movePos.x = Input.GetAxis("Horizontal") * moveSpeed;
-        movePos.z = Input.GetAxis("Vertical") * moveSpeed;
-        controller.Move(movePos);
+        //movePos.x = Input.GetAxis("Horizontal") * moveSpeed;
+        //movePos.z = Input.GetAxis("Vertical") * moveSpeed;
+        //controller.Move(movePos);
 
         if (Input.GetKeyDown(KeyCode.Return))
         {

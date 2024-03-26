@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("DemoPlayer");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 

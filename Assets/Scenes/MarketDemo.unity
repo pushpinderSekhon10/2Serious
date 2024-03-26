@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 115665975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62066de9aa6d4934a98846776da6314, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f40e67401f7740489cddbf3e87ddb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &115665981
@@ -494,9 +494,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 420534025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208d89a8995994910890066109b04032, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c81af1eb27ef455a8c6874cf56dc5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proximityCoinPrefab: {fileID: 0}
 --- !u!1 &612300663
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,9 +613,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 612300663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d96348949b28146809146aa905ffb9fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 37cea8dea8f7e4ef4ab5e7bfad9261e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPrefab: {fileID: 0}
 --- !u!1 &1482434996
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +735,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482434996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35b7bde8759c440da91299ff4e9141a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f7798bec1efe40e2ab2f3c7e83f57f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
@@ -742,10 +744,6 @@ MonoBehaviour:
   currentHealth: 0
   healthCapacity: 0
   moveSpeed: 0.5
-  displayDamage: {fileID: 0}
-  displayScore: {fileID: 0}
-  displayHealth: {fileID: 0}
-  displayHealthCapacity: {fileID: 0}
   shopPanel: {fileID: 0}
   shopHeader: {fileID: 0}
   numHealthIncreases: 0

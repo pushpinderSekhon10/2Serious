@@ -6,7 +6,7 @@ using UnityEngine;
 public class ProximityCoinBehaviour : MonoBehaviour
 {
     public static int value = 7;
-    public GameObject proximityCoinPrefab;
+    //public GameObject proximityCoinPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -14,19 +14,19 @@ public class ProximityCoinBehaviour : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             // Generate a random position for each coin
-            Vector3 randomPosition = GeneratePosition();
+            //Vector3 randomPosition = GeneratePosition();
 
             // Instantiate the coin at the random position
-            Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(90f, 0f, 0f));
+            //Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(90f, 0f, 0f));
         }
 
         for (int i = 0; i < 5; i++)
         {
             // Generate a random position for each coin
-            Vector3 randomPosition = GeneratePosition();
+            //Vector3 randomPosition = GeneratePosition();
 
             // Instantiate the coin at the random position
-            Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(0f, 0f, 90f));
+            //Instantiate(proximityCoinPrefab, randomPosition, Quaternion.Euler(0f, 0f, 90f));
         }
 
     }
