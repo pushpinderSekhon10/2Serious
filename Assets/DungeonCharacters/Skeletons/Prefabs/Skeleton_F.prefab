@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 1378492343361504080}
   m_Layer: 9
   m_Name: Skeleton_F
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2132,7 +2132,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ee5e50c69f7681a40b61e11b4379c94c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  weapon: {fileID: 0}
+  weapon: {fileID: 861250509044215869}
   attackCD: 1
   attackRange: 2
   aggroRange: 4
@@ -2699,7 +2699,7 @@ GameObject:
   - component: {fileID: 4936832130248608770}
   - component: {fileID: 87932519154862679}
   m_Layer: 9
-  m_Name: EnemyDamageDealerMarker
+  m_Name: damageDealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

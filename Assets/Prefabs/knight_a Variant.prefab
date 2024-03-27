@@ -66,6 +66,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 490566929938084348, guid: 3641eef66138d436397ac0c685fec184, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2845057e67fa96e49b7702a119851e49, type: 2}
     - target: {fileID: 607336844448528787, guid: 3641eef66138d436397ac0c685fec184, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -108,15 +112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380649506516484837, guid: 3641eef66138d436397ac0c685fec184, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 296.6834
+      value: 1140.2659
       objectReference: {fileID: 0}
     - target: {fileID: 3380649506516484837, guid: 3641eef66138d436397ac0c685fec184, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.64239
+      value: 80.03088
       objectReference: {fileID: 0}
     - target: {fileID: 3380649506516484837, guid: 3641eef66138d436397ac0c685fec184, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1000.0573
+      value: 758.299
       objectReference: {fileID: 0}
     - target: {fileID: 3380649506516484837, guid: 3641eef66138d436397ac0c685fec184, type: 3}
       propertyPath: m_LocalRotation.w
@@ -326,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  death: 0
 --- !u!114 &6294234695446148792
 MonoBehaviour:
   m_ObjectHideFlags: 0
