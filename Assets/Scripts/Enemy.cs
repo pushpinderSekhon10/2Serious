@@ -18,18 +18,20 @@ public class Enemy : MonoBehaviour
     GameObject player;
     NavMeshAgent agent;
     Animator animator;
+    HealthSystem playerDied;
+
 
     float timePassed;
     float newDestinationCD = 0.5f;
-
+   
     
     void Start()
     {
         player = GameObject.FindWithTag("DemoPlayer");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-
-        //agent.SetDestination(player.transform.position);
+        playerDied = new HealthSystem();
+        
     }
 
     public void TakeDamage(float damageAmount)
@@ -66,12 +68,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-        
 
-        if (player == null)
-        {
-            return;
-        }
+        //if (playerDied.Die() == true)
+        //{
+            //return;
+        //}
 
         if (timePassed >= attackCD)
         {
@@ -79,7 +80,7 @@ public class Enemy : MonoBehaviour
 
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                //Debug.Log("attack");
+                
                 animator.SetTrigger("attack");
                 timePassed = 0;
 

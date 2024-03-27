@@ -114,6 +114,10 @@ public class animationStateController : MonoBehaviour
         }
 
     }
+    public GameObject Weapon
+    {
+        get { return weapon; }
+    }
 
     public void StartDealDamage()
     {
