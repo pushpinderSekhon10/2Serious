@@ -47,7 +47,7 @@ public class Example : MonoBehaviour
 
         
 
-        float speed = inputMag * 20;
+        float speed = inputMag * 10;
         move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
         move.Normalize();
 
@@ -57,6 +57,7 @@ public class Example : MonoBehaviour
         {
             previousGroundedTime = Time.time;
         }
+
 
         if (Input.GetButtonDown("Jump"))
         {

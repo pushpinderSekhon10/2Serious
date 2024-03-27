@@ -7,6 +7,7 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
 {
 
     //public TMP_Text displayDamage;
+    public GameObject player_character;
 
     // Start is called before the first frame update
     void Start()
