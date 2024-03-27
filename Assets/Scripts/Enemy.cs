@@ -28,9 +28,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("DemoPlayer");
+        playerDied = player.GetComponent<HealthSystem>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        playerDied = new HealthSystem();
         
     }
 
@@ -68,11 +68,12 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-
-        //if (playerDied.Die() == true)
-        //{
-            //return;
-        //}
+        Debug.Log(playerDied.deathProperty);
+        if (playerDied.deathProperty == true)
+        {
+            
+            return;
+        }
 
         if (timePassed >= attackCD)
         {

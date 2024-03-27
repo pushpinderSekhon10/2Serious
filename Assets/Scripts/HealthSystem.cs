@@ -9,9 +9,23 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] public float health = 100;
     Animator animator;
     NavMeshAgent agent;
-    
+    public bool death;
 
     //animationStateController weaponHolder = new animationStateController();
+    public HealthSystem()
+    {
+
+    }
+
+    public bool deathProperty
+    {
+        
+        get
+        {
+            return death;
+        }
+
+    }
 
 
     void Start()
@@ -41,7 +55,7 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public bool Die()
+    public void Die()
     {
         //GameObject weapon = weaponHolder.Weapon;
 
@@ -58,6 +72,6 @@ public class HealthSystem : MonoBehaviour
         //DamageDealer damageDealer = weapon.GetComponentInChildren<DamageDealer>();
         //damageDealer.enabled = false;
 
-        return true;
+        death = true;
     }
 }
