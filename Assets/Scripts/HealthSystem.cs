@@ -34,5 +34,6 @@ public class HealthSystem : MonoBehaviour
     void Die()
     {
         Destroy(this.gameObject);
+        
     }
 }
