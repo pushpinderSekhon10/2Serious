@@ -5,10 +5,15 @@ using UnityEngine.EventSystems;
 
 public class HealthPurchaseBehaviour : PurchaseBehaviour
 {
+    public HealthSystem healthSystem;
+    public GameObject player_character;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        healthSystem = player_character.GetComponent<HealthSystem>();
+       
+          
     }
 
     // Update is called once per frame
@@ -30,6 +35,9 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
             {
                 player.score -= 10;
                 player.currentHealth += 10;
+                healthSystem.health += 10;
+                
+                
                 player.numHealthIncreases++;
                 if (player.numHealthIncreases < 2)
                 {

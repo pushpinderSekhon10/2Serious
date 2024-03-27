@@ -6,9 +6,10 @@ using UnityEngine.AI;
 public class HealthSystem : MonoBehaviour
 
 {
-    [SerializeField] float health = 100;
+    [SerializeField] public float health = 100;
     Animator animator;
     NavMeshAgent agent;
+    
 
     //animationStateController weaponHolder = new animationStateController();
 
@@ -17,12 +18,15 @@ public class HealthSystem : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+  
         
     }
 
     
     void Update()
     {
+        //health = healthPurchaseBehaviour.healthInHealthSystem;
+        Debug.Log(health.ToString());
         
     }
 
