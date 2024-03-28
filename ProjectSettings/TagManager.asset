@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DemoPlayer
+  - ProximityCoin
+  - XPSource
+  - CollisionCoin
+  - AnimTag
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,9 +18,9 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
+  - Collectable
+  - Player
+  - Enemy
   - 
   - 
   - 

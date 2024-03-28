@@ -1,0 +1,16 @@
+This package contains:
+prefabs x30
+meshes x6
+textures x36
+
+the weapon models could be found in _bonus folder.
+
+(all characters are rigged).
+
+If you have any problem about this package,
+
+please contact:
+
+wilhelmvonc@gmail.com
+
+########CHEERS!###########
