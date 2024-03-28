@@ -1,6 +1,6 @@
-# `Jaanke`
+# `2Serious`
 
-Welcome to `Jaanke`, a Unity-based game where you go back in time to fight zombie enemies and reclaim the land. Immerse yourself in a thrilling adventure spread across three levels, each presenting unique challenges and enemies. As you progress, earn points for your kills and spend them in the market to upgrade your armor and machinery, enhancing your fighting capabilities.
+Welcome to `2Serious`, a Unity-based game where you go back in time to fight zombie enemies and reclaim the land. Immerse yourself in a thrilling adventure spread across three levels, each presenting unique challenges and enemies. As you progress, earn points for your kills and spend them in the market to upgrade your armor and machinery, enhancing your fighting capabilities.
 
 
 ## Table of Contents
@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Unity Setup
 
-Before you can run `Jaanke`, you need to set up Unity on your computer. If you haven't already, download and install Unity Hub from [Unity's official website](https://unity.com/download). After installing Unity Hub, you'll need to install a Unity Editor version that is compatible with this project (e.g., Unity 2020.3.14f1). You can do this through Unity Hub by navigating to the Installs tab and clicking the "Add" button to add a new version of the Unity Editor.
+Before you can run `2Serious`, you need to set up Unity on your computer. If you haven't already, download and install Unity Hub from [Unity's official website](https://unity.com/download). After installing Unity Hub, you'll need to install a Unity Editor version that is compatible with this project (e.g., Unity 2020.3.14f1). You can do this through Unity Hub by navigating to the Installs tab and clicking the "Add" button to add a new version of the Unity Editor.
 
 ### Pulling the Code
 
@@ -30,7 +30,7 @@ Before you can run `Jaanke`, you need to set up Unity on your computer. If you h
 
 ## How the Game Works
 
-`Jaanke` is an action-packed game where you traverse through three distinct levels, battling zombie enemies to reclaim the land. Here's how to get started:
+`2Serious` is an action-packed game where you traverse through three distinct levels, battling zombie enemies to reclaim the land. Here's how to get started:
 
 1. **Starting the Game**: After launching the game, you’ll be greeted with the main menu. From here, you can start your journey, adjust settings, or explore other options.
 2. **Gameplay**: Use the AWSD keys or the arrow keys to move backward and side to side. Fight off zombies and progress through the levels to take back the land.
