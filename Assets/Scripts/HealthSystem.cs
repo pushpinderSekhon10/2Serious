@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class HealthSystem : MonoBehaviour
 
 {
-    [SerializeField] public float health = 100;
+    [SerializeField] public float health;
     Animator animator;
     NavMeshAgent agent;
     public bool death;

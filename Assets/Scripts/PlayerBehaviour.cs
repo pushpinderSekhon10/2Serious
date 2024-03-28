@@ -11,14 +11,23 @@ public class PlayerBehaviour : ResourceManager
     //Vector3 movePos;
 
     public GameObject shopPanel;
-    public TMP_Text shopHeader;
+    public GameObject statsPanel;
+    public TMP_Text shopHeader, displayScore, displayHealth, displayDamage;
     public int numHealthIncreases = 0, numDamageIncreases = 0;
+    public HealthSystem healthSystem;
+    public GameObject player_character;
+    public DamageDealer damageDealer;
+    public GameObject player_weapon;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         shopPanel.SetActive(false);
+        statsPanel.SetActive(false);
+
+        healthSystem = player_character.GetComponent<HealthSystem>();
+        damageDealer = player_weapon.GetComponent<DamageDealer>();
 
         //score = 0;
         //xpPoints = 0;
@@ -40,6 +49,17 @@ public class PlayerBehaviour : ResourceManager
             ToggleShopPanel();
             numDamageIncreases = 0;
             numHealthIncreases = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            TogglePlayerStats();
+            numDamageIncreases = 0;
+            numHealthIncreases = 0;
+        }
+
+        if (statsPanel.activeSelf) {
+            UpdatePlayerStats();
         }
 
     }
@@ -69,5 +89,16 @@ public class PlayerBehaviour : ResourceManager
     {
         shopPanel.SetActive(!shopPanel.activeSelf);
         shopHeader.text = "Quick Purchase Menu";
+    }
+
+    void TogglePlayerStats()
+    {
+        statsPanel.SetActive(!statsPanel.activeSelf);
+    }
+
+    void UpdatePlayerStats() {
+        displayHealth.text = healthSystem.health.ToString();
+        displayDamage.text = damageDealer.weaponDamage.ToString();
+        displayScore.text = score.ToString();
     }
 }
