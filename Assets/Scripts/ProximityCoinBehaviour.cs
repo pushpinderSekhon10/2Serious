@@ -8,6 +8,9 @@ public class ProximityCoinBehaviour : MonoBehaviour
     public static int value = 7;
     //public GameObject proximityCoinPrefab;
 
+    // References to the AudioSource components for playing the sounds.
+
+    [SerializeField] private AudioSource coinPickUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class ProximityCoinBehaviour : MonoBehaviour
     {
         if (other.CompareTag("DemoPlayer"))
         {
+            coinPickUp.Play();
             Destroy(gameObject);
         }
     }
