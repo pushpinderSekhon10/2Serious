@@ -33,7 +33,7 @@ public class EnemyDamageDealer : MonoBehaviour
 
                     health.TakeDamage(weaponDamage);
                     hasDealDamage = true;
-                    //Debug.Log("damage");
+                    Debug.Log("damage");
 
                 }
                 
