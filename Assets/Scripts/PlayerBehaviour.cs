@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerBehaviour : ResourceManager
 {
     CharacterController controller;
-    public float moveSpeed = 0.5f;
-    Vector3 movePos;
+    //public float moveSpeed = 0.5f;
+    //Vector3 movePos;
 
     public GameObject shopPanel;
     public TMP_Text shopHeader;
@@ -20,11 +20,11 @@ public class PlayerBehaviour : ResourceManager
         controller = GetComponent<CharacterController>();
         shopPanel.SetActive(false);
 
-        score = 0;
-        xpPoints = 0;
-        healthCapacity = 100;
-        currentHealth = 70;
-        currentDamage = 25;
+        //score = 0;
+        //xpPoints = 0;
+        //healthCapacity = 100;
+        //currentHealth = 70;
+        //currentDamage = 25;
 
     }
 

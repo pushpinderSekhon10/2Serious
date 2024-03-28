@@ -7,13 +7,17 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
 {
     public HealthSystem healthSystem;
     public GameObject player_character;
+    public PlayerBehaviour playerBehaviour;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         healthSystem = player_character.GetComponent<HealthSystem>();
-       
-          
+        playerBehaviour = player_character.GetComponent<PlayerBehaviour>();
+        
+
+
     }
 
     // Update is called once per frame
@@ -29,34 +33,36 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
 
     public override void updateResource()
     {
-        if (player.score >= 10)
+        score = playerBehaviour.score;
+        if (score >= 10)
+           
         {
-            if (player.currentHealth + 10 <= player.healthCapacity)
+            playerBehaviour.score = score - 10;
+            if (true)
             {
-                player.score -= 10;
-                player.currentHealth += 10;
+                
                 healthSystem.health += 10;
-                
-                
-                player.numHealthIncreases++;
-                if (player.numHealthIncreases < 2)
+
+
+                playerBehaviour.numHealthIncreases++;
+                if (playerBehaviour.numHealthIncreases < 2)
                 {
-                    player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increase Purchased";
+                    playerBehaviour.shopHeader.text = playerBehaviour.numHealthIncreases.ToString() + " x Health Increase Purchased";
                 }
                 else
                 {
-                    player.shopHeader.text = player.numHealthIncreases.ToString() + " x Health Increases Purchased!";
+                    playerBehaviour.shopHeader.text = playerBehaviour.numHealthIncreases.ToString() + " x Health Increases Purchased!";
                 }
                 //player.displayHealthCapacity.text = player.healthCapacity.ToString();
                 //player.displayScore.text = player.score.ToString();
             }
-            else {
-                player.shopHeader.text = "Health too high!";
-            }
+            //else {
+            //    playerBehaviour.shopHeader.text = "Health too high!";
+            //}
         }
         else
         {
-            player.shopHeader.text = "Insufficient Funds!";
+            playerBehaviour.shopHeader.text = "Insufficient Funds!";
         }
     }
 }

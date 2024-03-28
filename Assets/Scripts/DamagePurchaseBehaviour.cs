@@ -32,7 +32,7 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
         {
 
             player.score -= 10;
-            player.currentDamage += 15;
+            //player.currentDamage += 15;
             player.numDamageIncreases++;
             damageDealer.weaponDamage += 10;
             

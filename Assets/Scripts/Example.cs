@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Example : MonoBehaviour
+public class Example : ResourceManager
 {
     [SerializeField]
     private float maxSpeed;
@@ -22,6 +22,7 @@ public class Example : MonoBehaviour
     private float stepOffset;
     private float? previousGroundedTime;
     private float? jumpButtonPressedTime;
+
 
     // Start is called before the first frame update
     void Start()

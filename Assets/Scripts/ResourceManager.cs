@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    
-    public int score, xpPoints, currentDamage, currentHealth, healthCapacity;
+
+    public int score;
+        //, xpPoints, currentDamage, currentHealth, healthCapacity;
 
     void Start()
     {
@@ -24,24 +25,24 @@ public class ResourceManager : MonoBehaviour
 
     public void updateHealth(int healthInc)
     {
-        if ((currentHealth + healthInc) <= healthCapacity)
+        //if ((currentHealth + healthInc) <= healthCapacity)
         {   
-            this.currentHealth += healthInc;
+            //this.currentHealth += healthInc;
         }
-        if (currentHealth <= 0)
+        //if (currentHealth <= 0)
         {
-            Destroy(this);
+            //Destroy(this);
         }
     }
 
     public void updateHealthCapacity(int healthCapInc)
     {
-        this.healthCapacity += healthCapInc;
+        //this.healthCapacity += healthCapInc;
     }
 
     public void updateXP(int xpInc)
     {
-        this.xpPoints += xpInc;
+        //this.xpPoints += xpInc;
     }
 
 }

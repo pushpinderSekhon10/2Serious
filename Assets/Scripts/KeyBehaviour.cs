@@ -10,7 +10,7 @@ public class KeyBehaviour : PurchaseBehaviour
     void Start()
     {
         GameObject characterObject = GameObject.FindWithTag("DemoPlayer");
-        player = characterObject.GetComponent<PlayerBehaviour>();
+        //player = characterObject.GetComponent<PlayerBehaviour>();
     }
 
     // Update is called once per frame
@@ -25,9 +25,9 @@ public class KeyBehaviour : PurchaseBehaviour
     public override void updateResource()
     {
         Debug.Log("Hello");
-        player.currentDamage += 30;
-        player.healthCapacity += 20;
-        player.currentHealth = player.healthCapacity;
+        //player.currentDamage += 30;
+        //player.healthCapacity += 20;
+        //player.currentHealth = player.healthCapacity;
         Destroy(gameObject);
 
             //player.displayDamage.text = player.currentDamage.ToString();

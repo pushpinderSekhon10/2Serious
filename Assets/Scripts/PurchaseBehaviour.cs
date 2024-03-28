@@ -11,8 +11,8 @@ public abstract class PurchaseBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject characterObject = GameObject.FindWithTag("DemoPlayer");
-        player = characterObject.GetComponent<PlayerBehaviour>();
+        //GameObject characterObject = GameObject.FindWithTag("DemoPlayer");
+        //player = characterObject.GetComponent<PlayerBehaviour>();
     }
 
     // Update is called once per frame
