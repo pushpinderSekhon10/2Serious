@@ -9,7 +9,11 @@ public class DamageDealer : MonoBehaviour
 
     [SerializeField] float weaponLength;
     [SerializeField] float weaponDamage;
-    
+
+    // References to the AudioSource components for playing the sounds.
+    [SerializeField] private AudioSource swordSliceAudioSource;
+    [SerializeField] private AudioSource manYellingAudioSource;
+
     void Start()
     {
         canDealDamage = false;
@@ -20,21 +24,25 @@ public class DamageDealer : MonoBehaviour
     {
         if (canDealDamage)
         {
-            //Debug.Log("hi");
-            
             RaycastHit hit;
 
             int layerMask = 1 << 9;
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-                //Debug.Log("in here");
                 if (hit.transform.TryGetComponent(out Enemy enemy) && !hasDealtDamage.Contains(hit.transform.gameObject))
                 {
                     print("damage");
                     enemy.TakeDamage(weaponDamage);
                     hasDealtDamage.Add(hit.transform.gameObject);
+                    // Play both sounds as the player hits an enemy.
+                    swordSliceAudioSource.Play();
+                    manYellingAudioSource.Play();
                 }
-
+            }
+            else
+            {
+                // Play only the sword slice sound when missing.
+                swordSliceAudioSource.Play();
             }
         }
     }
@@ -55,3 +63,4 @@ public class DamageDealer : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position - transform.up * weaponLength);
     }
 }
+
