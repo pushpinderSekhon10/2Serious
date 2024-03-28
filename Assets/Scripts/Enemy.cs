@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-        Debug.Log(playerDied.deathProperty);
+        
         if (playerDied.deathProperty == true)
         {
             

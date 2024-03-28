@@ -40,7 +40,7 @@ public class HealthSystem : MonoBehaviour
     void Update()
     {
         //health = healthPurchaseBehaviour.healthInHealthSystem;
-        Debug.Log(health.ToString());
+        
         
     }
 

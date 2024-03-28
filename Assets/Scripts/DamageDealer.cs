@@ -8,7 +8,7 @@ public class DamageDealer : MonoBehaviour
     List<GameObject> hasDealtDamage;
 
     [SerializeField] float weaponLength;
-    [SerializeField] float weaponDamage;
+    [SerializeField] public float weaponDamage;
 
     // References to the AudioSource components for playing the sounds.
     [SerializeField] private AudioSource swordSliceAudioSource;

@@ -7,11 +7,13 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
 {
 
     //public TMP_Text displayDamage;
-    public GameObject player_character;
+    public GameObject damage_object;
+    public DamageDealer damageDealer;
 
     // Start is called before the first frame update
     void Start()
     {
+        damageDealer = damage_object.GetComponent<DamageDealer>();
 
     }
 
@@ -32,6 +34,8 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
             player.score -= 10;
             player.currentDamage += 15;
             player.numDamageIncreases++;
+            damageDealer.weaponDamage += 10;
+            
             if (player.numDamageIncreases < 2)
             {
                 player.shopHeader.text = player.numDamageIncreases.ToString() + " x Damage Increase Purchased";
