@@ -51,7 +51,11 @@ public class Example : ResourceManager
 
 
 
-            float speed = inputMag * 10;
+            float speed = inputMag * 7;
+            if (Input.GetKey("r"))
+            {
+                speed = speed * 2;
+            }
             move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
             move.Normalize();
 
