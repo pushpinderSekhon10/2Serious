@@ -88,7 +88,7 @@ public class HealthSystem : MonoBehaviour
     public void respawn() 
     {
         transform.position = respawnPoint;
-        animator.SetBool("respawn",true);
+        animator.SetTrigger("respawn");
         death = false;
         health = 3;
         GetComponent<CharacterController>().enabled = true;
