@@ -6,13 +6,13 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health = 3;
+    [SerializeField] public float health = 3;
     [SerializeField] GameObject weapon;
 
     [Header("Combat")]
-    [SerializeField] float attackCD = 1f;
-    [SerializeField] float attackRange = 1f;
-    [SerializeField] float aggroRange = 4f;
+    [SerializeField] public float attackCD = 1f;
+    [SerializeField] public float attackRange = 1f;
+    [SerializeField] public float aggroRange = 4f;
 
 
     GameObject player;
@@ -61,13 +61,49 @@ public class Enemy : MonoBehaviour
         EnemyDamageDealer damageDealer = weapon.GetComponentInChildren<EnemyDamageDealer>();
         damageDealer.enabled = false;
         
-
-
     }
-   
-    void Update()
+    
+    public void AttackingBehaviour(String attackType)
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+
+        if (playerDied.deathProperty == true)
+        {
+
+            return;
+        }
+
+        if (timePassed >= attackCD)
+        {
+            //Debug.Log("Distance to player: " + Vector3.Distance(player.transform.position, transform.position));
+
+            if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+            {
+
+                animator.SetTrigger(attackType);
+                timePassed = 0;
+
+
+            }
+        }
+
+        timePassed += Time.deltaTime;
+
+
+        if (newDestinationCD <= 0 && Vector3.Distance(player.transform.position, transform.position) <= aggroRange)
+        {
+            newDestinationCD = 0.5f;
+            agent.SetDestination(player.transform.position);
+
+        }
+
+        newDestinationCD -= Time.deltaTime;
+        transform.LookAt(player.transform);
+    }
+
+    void Update()
+    {
+        /*animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
         
         if (playerDied.deathProperty == true)
         {
@@ -100,7 +136,9 @@ public class Enemy : MonoBehaviour
         }
 
         newDestinationCD -= Time.deltaTime;
-        transform.LookAt(player.transform);
+        transform.LookAt(player.transform);*/
+
+        AttackingBehaviour("attack");
     }
 
     public void StartDealDamage()
