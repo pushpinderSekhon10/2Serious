@@ -1533,7 +1533,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.093425, y: 2.093425, z: 2.093425}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 410180}
@@ -1578,8 +1578,10 @@ MonoBehaviour:
   health: 3
   weapon: {fileID: 5098243131550822633}
   attackCD: 1.5
-  attackRange: 2
-  aggroRange: 4
+  attackRange: 4
+  aggroRange: 10
+  attackType: 
+  died: 0
 --- !u!195 &6598095020184054415
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1594,7 +1596,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 2.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2628,13 +2630,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5098243131550822633}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7023645, y: -0.009275525, z: 0.009398988, w: 0.7116951}
-  m_LocalPosition: {x: -0.154, y: 0, z: 0.741}
+  m_LocalRotation: {x: 0.7044926, y: 0.013561693, z: -0.01382675, w: 0.709447}
+  m_LocalPosition: {x: 0.027, y: 0, z: 0.717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 477558}
-  m_LocalEulerAnglesHint: {x: 89.244, y: 0.001, z: 1.515}
+  m_LocalEulerAnglesHint: {x: 89.598, y: -1.953, z: -4.172}
 --- !u!114 &8718230612203312831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,5 +2649,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fd687de6a1604099a6125b24fc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponLength: 1.17
+  weaponLength: 2.42
   weaponDamage: 5

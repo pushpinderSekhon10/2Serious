@@ -13,7 +13,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] public float attackCD = 1f;
     [SerializeField] public float attackRange = 1f;
     [SerializeField] public float aggroRange = 4f;
+    [SerializeField] public String attackType;
 
+    public bool died = false;
 
     GameObject player;
     NavMeshAgent agent;
@@ -42,10 +44,11 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            died = true;
         }
     }
 
-    public void Die()
+    public bool Die()
     {
         //Destroy(this.gameObject);
         
@@ -60,6 +63,8 @@ public class Enemy : MonoBehaviour
 
         EnemyDamageDealer damageDealer = weapon.GetComponentInChildren<EnemyDamageDealer>();
         damageDealer.enabled = false;
+
+        return true;
         
     }
     
@@ -151,7 +156,7 @@ public class Enemy : MonoBehaviour
         weapon.GetComponentInChildren<EnemyDamageDealer>().EndDealDamage();
     }
 
-    private void OnDrawGizmos()
+    public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
