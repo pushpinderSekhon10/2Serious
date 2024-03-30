@@ -1,6 +1,6 @@
 # `2Serious`
 
-Welcome to `2Serious`, a Unity-based game where you go back in time to fight zombie enemies and reclaim the land. Immerse yourself in a thrilling adventure spread across three levels, each presenting unique challenges and enemies. As you progress, earn points for your kills and spend them in the market to upgrade your armor and machinery, enhancing your fighting capabilities.
+Welcome to `2Serious`, a Unity-based game where you, a lonely crusader, fight an undead skeleton army led by an evil warlord to reclaim the 2Serious Kingdom. Immerse yourself in a thrilling adventure spread across three levels, each presenting unique challenges and enemies. As you progress, earn points for your kills and spend them in the market to upgrade your armor and machinery, enhancing your fighting capabilities.
 
 
 ## Table of Contents
