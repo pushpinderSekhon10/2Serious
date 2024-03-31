@@ -11,6 +11,7 @@ public class animationStateController : MonoBehaviour
     int isStrafing;
     int isBack;
     int isLightAttacking;
+    int isBlocking;
     [SerializeField] GameObject weapon;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class animationStateController : MonoBehaviour
         isStrafing = Animator.StringToHash("strafe");
         isBack = Animator.StringToHash("back");
         isLightAttacking = Animator.StringToHash("attackLight");
+        isBlocking = Animator.StringToHash("block");
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class animationStateController : MonoBehaviour
         bool strafing = animator.GetBool(isStrafing);
         bool backing = animator.GetBool(isBack);
         bool lightAttacking = animator.GetBool(isLightAttacking);
+        bool blocking = animator.GetBool(isBlocking);
         bool walk = Input.GetKey("w");
         bool attack = Input.GetKey("q");
         bool run = Input.GetKey("r");
@@ -41,6 +44,7 @@ public class animationStateController : MonoBehaviour
         bool strafe2 = Input.GetKey("d");
         bool backUp = Input.GetKey("s");
         bool lightAttack = Input.GetKey("e");
+        bool block = Input.GetKey("f");
 
         if (!walking && walk)
         {
@@ -110,6 +114,16 @@ public class animationStateController : MonoBehaviour
         if (backing && !backUp)
         {
             animator.SetBool(isBack, false);
+
+        }
+        if (!blocking && block)
+        {
+            animator.SetBool(isBlocking, true);
+
+        }
+        if (blocking && !block)
+        {
+            animator.SetBool(isBlocking, false);
 
         }
 

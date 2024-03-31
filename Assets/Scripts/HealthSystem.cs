@@ -54,8 +54,11 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        animator.SetTrigger("damage");
+        if (!Input.GetKey("f"))
+        {
+            health -= damageAmount;
+            animator.SetTrigger("damage");
+        }
 
         if (health <= 0)
         {
