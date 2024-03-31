@@ -774,6 +774,8 @@ MonoBehaviour:
   attackCD: 1
   attackRange: 2
   aggroRange: 4
+  attackType: 
+  died: 0
 --- !u!195 &5192333027924695663
 NavMeshAgent:
   m_ObjectHideFlags: 0

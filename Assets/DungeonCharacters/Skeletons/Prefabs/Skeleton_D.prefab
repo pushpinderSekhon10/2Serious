@@ -2469,11 +2469,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d95fb8dbad536947b2c530b09056450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 2
   weapon: {fileID: 5682157416015520487}
   attackCD: 1
   attackRange: 2
   aggroRange: 4
+  attackType: 
+  died: 0
 --- !u!136 &6250401809501432462
 CapsuleCollider:
   m_ObjectHideFlags: 0

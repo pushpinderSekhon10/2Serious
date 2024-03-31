@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     private Enemy boss;
 
     //[SerializeField] GameObject bossWeapon;
+    [SerializeField] GameObject barrier;
 
 
     void Start()
@@ -26,6 +27,7 @@ public class Boss : MonoBehaviour
         {
             Debug.Log("disabled");
             enabled = false;
+            Destroy(barrier);
         }
     }
 

@@ -1529,11 +1529,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d95fb8dbad536947b2c530b09056450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 2
   weapon: {fileID: 8448754498623436709}
   attackCD: 1
   attackRange: 2
   aggroRange: 4
+  attackType: 
+  died: 0
 --- !u!195 &4443454993690756588
 NavMeshAgent:
   m_ObjectHideFlags: 0
