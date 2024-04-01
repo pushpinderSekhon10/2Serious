@@ -7,6 +7,7 @@ public class HealthSystem : MonoBehaviour
 
 {
     [SerializeField] public float health;
+    [SerializeField] AudioSource deathSound;
     Animator animator;
     NavMeshAgent agent;
     public bool death;
@@ -73,6 +74,7 @@ public class HealthSystem : MonoBehaviour
         animator.SetTrigger("death");
         GetComponent<animationStateController>().enabled = false;
 
+        deathSound.Play();
 
         GetComponent<CharacterController>().enabled = false;
         //GetComponent<Example>().enabled = false;
