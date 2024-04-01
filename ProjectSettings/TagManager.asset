@@ -11,6 +11,7 @@ TagManager:
   - AnimTag
   - Enemy
   - Boss
+  - Collide
   layers:
   - Default
   - TransparentFX
