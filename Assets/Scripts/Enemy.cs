@@ -68,16 +68,17 @@ public class Enemy : MonoBehaviour
         
     }
     
-    public void AttackingBehaviour(String attackType)
+    public void AttackingBehaviour(string attackType)
     {
         animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-
+        
         if (playerDied.deathProperty == true)
         {
+            
 
             return;
         }
-
+        
         if (timePassed >= attackCD)
         {
             //Debug.Log("Distance to player: " + Vector3.Distance(player.transform.position, transform.position));

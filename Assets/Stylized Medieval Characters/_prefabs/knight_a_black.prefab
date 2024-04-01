@@ -521,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   weapon: {fileID: 3430540596546049586}
-  attackCD: 1
+  attackCD: 1.5
   attackRange: 2
   aggroRange: 5
   attackType: 

@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06742206a9f6e304f91fe4ea3e42d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrier: {fileID: 0}
 --- !u!136 &3749980052927503741
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -308,7 +309,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 768
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -317,7 +318,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.6
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
