@@ -44,15 +44,12 @@ public class Example : ResourceManager
             Vector3 move = new Vector3(horizontalInput, 0, verticalInput);
             float inputMag = Mathf.Clamp01(move.magnitude);
 
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            {
-                inputMag /= 2;
-            }
+            
 
 
 
             float speed = inputMag * 7;
-            if (Input.GetKey("r"))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 speed = speed * 2;
             }

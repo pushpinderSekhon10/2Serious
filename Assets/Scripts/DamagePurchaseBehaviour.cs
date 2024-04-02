@@ -34,9 +34,9 @@ public class DamagePurchaseBehaviour : PurchaseBehaviour
             player.score -= 10;
             //player.currentDamage += 15;
             player.numDamageIncreases++;
-            damageDealer.weaponDamage += 10;
+            damageDealer.weaponDamage += 1;
             
-            if (player.numDamageIncreases < 2)
+            if (player.numDamageIncreases < 10)
             {
                 player.shopHeader.text = player.numDamageIncreases.ToString() + " x Damage Increase Purchased";
             }

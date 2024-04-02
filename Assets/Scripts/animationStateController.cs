@@ -38,13 +38,13 @@ public class animationStateController : MonoBehaviour
         bool lightAttacking = animator.GetBool(isLightAttacking);
         bool blocking = animator.GetBool(isBlocking);
         bool walk = Input.GetKey("w");
-        bool attack = Input.GetKey("q");
-        bool run = Input.GetKey("r");
+        bool attack = Input.GetMouseButton(1);
+        bool run = Input.GetKey(KeyCode.LeftShift);
         bool strafe = Input.GetKey("a");
         bool strafe2 = Input.GetKey("d");
         bool backUp = Input.GetKey("s");
-        bool lightAttack = Input.GetKey("e");
-        bool block = Input.GetKey("f");
+        bool lightAttack = Input.GetMouseButton(0);
+        bool block = Input.GetKey(KeyCode.Space);
 
         if (!walking && walk)
         {

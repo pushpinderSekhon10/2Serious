@@ -1444,7 +1444,9 @@ MonoBehaviour:
   weapon: {fileID: 224132573442315579}
   attackCD: 1.5
   attackRange: 2
-  aggroRange: 4.5
+  aggroRange: 10
+  attackType: 
+  died: 0
 --- !u!136 &4053104627188844358
 CapsuleCollider:
   m_ObjectHideFlags: 0

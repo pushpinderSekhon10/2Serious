@@ -1013,7 +1013,7 @@ MonoBehaviour:
   weapon: {fileID: 4115312228721232922}
   attackCD: 1
   attackRange: 2
-  aggroRange: 5
+  aggroRange: 10
   attackType: 
   died: 0
 --- !u!136 &986477564372374774

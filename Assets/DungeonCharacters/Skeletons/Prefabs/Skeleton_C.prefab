@@ -2286,7 +2286,7 @@ MonoBehaviour:
   weapon: {fileID: 3965420971097091073}
   attackCD: 1
   attackRange: 2
-  aggroRange: 4
+  aggroRange: 10
   attackType: 
   died: 0
 --- !u!195 &3669557210692602822

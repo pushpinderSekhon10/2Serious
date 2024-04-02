@@ -41,11 +41,11 @@ public class HealthPurchaseBehaviour : PurchaseBehaviour
             if (true)
             {
                 
-                healthSystem.health += 10;
+                healthSystem.health += 3;
 
 
                 playerBehaviour.numHealthIncreases++;
-                if (playerBehaviour.numHealthIncreases < 2)
+                if (playerBehaviour.numHealthIncreases < 10)
                 {
                     playerBehaviour.shopHeader.text = playerBehaviour.numHealthIncreases.ToString() + " x Health Increase Purchased";
                 }
