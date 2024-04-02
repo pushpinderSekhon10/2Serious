@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [Header("Combat")]
     [SerializeField] public float attackCD = 1f;
     [SerializeField] public float attackRange = 1f;
-    [SerializeField] public float aggroRange = 4f;
+    [SerializeField] public float aggroRange = 20f;
     [SerializeField] public String attackType;
 
     public bool died = false;
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
     HealthSystem playerDied;
+    GameObject stateMachine;
 
 
     float timePassed;
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
+        stateMachine = gameObject;
         player = GameObject.FindWithTag("DemoPlayer");
         playerDied = player.GetComponent<HealthSystem>();
         agent = GetComponent<NavMeshAgent>();
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Debug.Log("died");
             Die();
             died = true;
         }
@@ -53,7 +56,7 @@ public class Enemy : MonoBehaviour
         //Destroy(this.gameObject);
         
         animator.SetTrigger("death");
-        
+        Debug.Log("death");
         GetComponent<CapsuleCollider>().enabled = false;
         
         agent.isStopped = true;
@@ -85,7 +88,7 @@ public class Enemy : MonoBehaviour
 
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
-
+                Debug.Log(attackType);
                 animator.SetTrigger(attackType);
                 timePassed = 0;
 
@@ -98,8 +101,18 @@ public class Enemy : MonoBehaviour
 
         if (newDestinationCD <= 0 && Vector3.Distance(player.transform.position, transform.position) <= aggroRange)
         {
+
             newDestinationCD = 0.5f;
             agent.SetDestination(player.transform.position);
+
+            /*            if (agent.isOnNavMesh)
+                        {
+                            agent.destination = player.transform.position;
+
+                        }*/
+            //Setting nextPosition to glue agent to the current position of the player
+            //agent.nextPosition = stateMachine.transform.position;
+
 
         }
 
@@ -143,8 +156,9 @@ public class Enemy : MonoBehaviour
 
         newDestinationCD -= Time.deltaTime;
         transform.LookAt(player.transform);*/
-
+       
         AttackingBehaviour("attack");
+        
     }
 
     public void StartDealDamage()

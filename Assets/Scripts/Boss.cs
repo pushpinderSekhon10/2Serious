@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class Boss : MonoBehaviour
 {
     private Enemy boss;
-    //public TMP_Text displayUserText;
+    public TMP_Text displayUserText;
 
     //[SerializeField] GameObject bossWeapon;
     //[SerializeField] GameObject barrier;
@@ -25,16 +25,13 @@ public class Boss : MonoBehaviour
     {
         
         boss.AttackingBehaviour(randomAttack());
-      
+        
        
 
         if (boss.died == true)
         {
-            Debug.Log("disabled");
             enabled = false;
-            //Destroy(barrier);
-/*           StartCoroutine(displayBossKilledForFiveSeconds());
-            displayUserText.text = "";*/
+            StartCoroutine(bossKilledText());
         }
     }
 
@@ -47,17 +44,23 @@ public class Boss : MonoBehaviour
         return attacks[randomNumber];
     }
 
-    /*IEnumerator displayBossKilledForFiveSeconds()
+    IEnumerator bossKilledText()
     {
         // Call your method here
         displayUserText.text = "Boss Killed - Proceed to next level!";
 
+        Debug.Log("Text Set, 5 seconds to be called");
+
         // Wait for five seconds
         yield return new WaitForSeconds(5f);
 
-        // After five seconds, you can perform any other actions here
-        // For example, you can call another method or do something else
-    }*/
+        Debug.Log("WaitFor5Seconds Complete");
+
+        displayUserText.text = "";
+
+        PlayerBehaviour.bossKilled = true;
+
+    }
 
 
 }

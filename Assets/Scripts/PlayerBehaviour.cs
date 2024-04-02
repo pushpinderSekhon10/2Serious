@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,6 +19,8 @@ public class PlayerBehaviour : ResourceManager
     public GameObject player_character;
     public DamageDealer damageDealer;
     public GameObject player_weapon;
+
+    public static Boolean bossKilled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,19 @@ public class PlayerBehaviour : ResourceManager
 
         if (statsPanel.activeSelf) {
             UpdatePlayerStats();
+        }
+
+        if (bossKilled) {
+            if (SceneManager.GetActiveScene().name == "showcase")
+            {
+                SceneManager.LoadScene("Level 2");
+                return;//CHANGE SCENE LOADED HERE TO LEVEL 2 OF GAME
+            }
+/*            else if (SceneManager.GetActiveScene().name == "Level 2") 
+            {
+
+                SceneManager.LoadScene("Level 3"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
+            }*/
         }
 
     }

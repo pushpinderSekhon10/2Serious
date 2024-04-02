@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06742206a9f6e304f91fe4ea3e42d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrier: {fileID: 0}
+  displayUserText: {fileID: 2276131203886497522, guid: fbafb03612dcaf845823c2adca85adcb, type: 3}
 --- !u!136 &3749980052927503741
 CapsuleCollider:
   m_ObjectHideFlags: 0

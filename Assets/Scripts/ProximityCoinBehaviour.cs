@@ -10,7 +10,7 @@ public class ProximityCoinBehaviour : MonoBehaviour
 
     // References to the AudioSource components for playing the sounds.
 
-    [SerializeField] private AudioSource coinPickUp;
+    [SerializeField] public AudioSource coinPickUp;
     // Start is called before the first frame update
     void Start()
     {
