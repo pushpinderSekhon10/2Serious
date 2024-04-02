@@ -7,7 +7,9 @@ using UnityEngine.AI;
 public class Boss : MonoBehaviour
 {
     private Enemy boss;
-    public TMP_Text displayUserText;
+    public GameObject displayUserText;
+
+    TMP_Text text;
 
     //[SerializeField] GameObject bossWeapon;
     //[SerializeField] GameObject barrier;
@@ -17,6 +19,9 @@ public class Boss : MonoBehaviour
     {
         GameObject bossGameObject = GameObject.FindGameObjectWithTag("Boss");
         boss = bossGameObject.GetComponent<Enemy>();
+        displayUserText = GameObject.FindWithTag("popup");
+        text = displayUserText.GetComponent<TMP_Text>();
+        
 
     }
 
@@ -25,8 +30,6 @@ public class Boss : MonoBehaviour
     {
         
         boss.AttackingBehaviour(randomAttack());
-        
-       
 
         if (boss.died == true)
         {
@@ -47,7 +50,7 @@ public class Boss : MonoBehaviour
     IEnumerator bossKilledText()
     {
         // Call your method here
-        displayUserText.text = "Boss Killed - Proceed to next level!";
+        text.text = "Boss Killed - Proceed to next level!";
 
         Debug.Log("Text Set, 5 seconds to be called");
 
@@ -56,7 +59,7 @@ public class Boss : MonoBehaviour
 
         Debug.Log("WaitFor5Seconds Complete");
 
-        displayUserText.text = "";
+        text.text = "";
 
         PlayerBehaviour.bossKilled = true;
 
