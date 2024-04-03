@@ -279,11 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d95fb8dbad536947b2c530b09056450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 15
   weapon: {fileID: 857733475352843999}
   attackCD: 1
   attackRange: 4
-  aggroRange: 8
+  aggroRange: 20
   attackType: 
   died: 0
 --- !u!114 &6930189235266303176
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06742206a9f6e304f91fe4ea3e42d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayUserText: {fileID: 2276131203886497522, guid: fbafb03612dcaf845823c2adca85adcb, type: 3}
+  displayUserText: {fileID: 0}
 --- !u!136 &3749980052927503741
 CapsuleCollider:
   m_ObjectHideFlags: 0

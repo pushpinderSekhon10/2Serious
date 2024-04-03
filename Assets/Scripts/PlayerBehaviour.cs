@@ -61,11 +61,13 @@ public class PlayerBehaviour : ResourceManager
             numHealthIncreases = 0;
         }
 
-        if (statsPanel.activeSelf) {
+        if (statsPanel.activeSelf)
+        {
             UpdatePlayerStats();
         }
 
-        if (bossKilled) {
+        if (bossKilled)
+        {
             if (SceneManager.GetActiveScene().name == "showcase")
             {
                 SceneManager.LoadScene("Level 2");
@@ -78,8 +80,14 @@ public class PlayerBehaviour : ResourceManager
                 SceneManager.LoadScene("level3"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
                 bossKilled = false;
             }
-        }
+            else if (SceneManager.GetActiveScene().name == "level3")
+            {
 
+                SceneManager.LoadScene("bonus scene"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
+                bossKilled = false;
+            }
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
