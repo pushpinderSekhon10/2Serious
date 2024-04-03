@@ -1516,9 +1516,10 @@ GameObject:
   - component: {fileID: 4831440827229104877}
   - component: {fileID: 6598095020184054415}
   - component: {fileID: 6214113441084077928}
+  - component: {fileID: 4630096601537378760}
   m_Layer: 9
   m_Name: Skeleton_TwoHanded_B
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1575,7 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d95fb8dbad536947b2c530b09056450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 8
   weapon: {fileID: 5098243131550822633}
   attackCD: 1.5
   attackRange: 4
@@ -1627,6 +1628,19 @@ CapsuleCollider:
   m_Height: 1.78
   m_Direction: 1
   m_Center: {x: 0, y: 0.78, z: 0}
+--- !u!114 &4630096601537378760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d318660ab04728408103ac95b5f76e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayUserText: {fileID: 0}
 --- !u!1 &162436
 GameObject:
   m_ObjectHideFlags: 0

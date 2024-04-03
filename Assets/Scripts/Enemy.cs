@@ -53,8 +53,9 @@ public class Enemy : MonoBehaviour
 
     public bool Die()
     {
+        died = true;
         //Destroy(this.gameObject);
-        
+
         animator.SetTrigger("death");
         Debug.Log("death");
         GetComponent<CapsuleCollider>().enabled = false;
