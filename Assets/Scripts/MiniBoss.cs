@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MiniBoss: MonoBehaviour
 {
@@ -42,7 +43,15 @@ public class MiniBoss: MonoBehaviour
     {
         Debug.Log("success");
         // Call your method here
-        text.text = "Boss Killed - Proceed to next level!";
+        
+        if (SceneManager.GetActiveScene().name == "showcase")
+        {
+            text.text = "Skeletor the Evil killed - Proceed to level 2";
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            text.text = "Arkan the Dishonourable killed - Proceed to level 3";
+        }
 
         Debug.Log("Text Set, 5 seconds to be called");
 

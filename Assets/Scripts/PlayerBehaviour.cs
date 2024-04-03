@@ -69,12 +69,14 @@ public class PlayerBehaviour : ResourceManager
             if (SceneManager.GetActiveScene().name == "showcase")
             {
                 SceneManager.LoadScene("Level 2");
+                bossKilled = false;
                 return;//CHANGE SCENE LOADED HERE TO LEVEL 2 OF GAME
             }
             else if (SceneManager.GetActiveScene().name == "Level 2")
             {
 
                 SceneManager.LoadScene("level3"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
+                bossKilled = false;
             }
         }
 

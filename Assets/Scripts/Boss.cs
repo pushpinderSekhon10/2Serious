@@ -50,7 +50,8 @@ public class Boss : MonoBehaviour
     IEnumerator bossKilledText()
     {
         // Call your method here
-        text.text = "Boss Killed - Proceed to next level!";
+        text.text = "Gerard the Giant Killed, Congratulations you have been accepted to the Guild of Heros";
+
 
         Debug.Log("Text Set, 5 seconds to be called");
 
