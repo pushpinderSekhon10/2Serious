@@ -71,11 +71,11 @@ public class PlayerBehaviour : ResourceManager
                 SceneManager.LoadScene("Level 2");
                 return;//CHANGE SCENE LOADED HERE TO LEVEL 2 OF GAME
             }
-/*            else if (SceneManager.GetActiveScene().name == "Level 2") 
+            else if (SceneManager.GetActiveScene().name == "Level 2")
             {
 
-                SceneManager.LoadScene("Level 3"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
-            }*/
+                SceneManager.LoadScene("level3"); //CHANGE SCENE LOADED HERE TO LEVEL 3 OF GAME
+            }
         }
 
     }

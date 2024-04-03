@@ -552,11 +552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d95fb8dbad536947b2c530b09056450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 8
   weapon: {fileID: 4853431773825562110}
-  attackCD: 1
+  attackCD: 1.5
   attackRange: 2
-  aggroRange: 4
+  aggroRange: 12
   attackType: 
   died: 0
 --- !u!136 &5794534430950655475
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponLength: 1.26
-  weaponDamage: 1
+  weaponDamage: 3
 --- !u!1001 &5477341799612659458
 PrefabInstance:
   m_ObjectHideFlags: 0
