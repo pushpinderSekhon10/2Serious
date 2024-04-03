@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Boss
   - Collide
+  - popup
   layers:
   - Default
   - TransparentFX
