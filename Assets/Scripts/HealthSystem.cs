@@ -70,7 +70,7 @@ public class HealthSystem : MonoBehaviour
     public void Die()
     {
         //GameObject weapon = weaponHolder.Weapon;
-        
+
         animator.SetTrigger("death");
         GetComponent<animationStateController>().enabled = false;
 
@@ -81,12 +81,13 @@ public class HealthSystem : MonoBehaviour
 
 
         GetComponent<CapsuleCollider>().enabled = false;
-        agent.isStopped = true;
-        agent.SetDestination(transform.position);
-        
+
         //DamageDealer damageDealer = weapon.GetComponentInChildren<DamageDealer>();
         //damageDealer.enabled = false;
 
+/*      agent.isStopped = true;
+        agent.SetDestination(transform.position);*/
+   
         death = true;
         
     }
@@ -101,7 +102,7 @@ public class HealthSystem : MonoBehaviour
 
 
         GetComponent<CapsuleCollider>().enabled = true;
-        agent.isStopped = false;
+        //agent.isStopped = false;
         GetComponent<animationStateController>().enabled = true;
 
     }
