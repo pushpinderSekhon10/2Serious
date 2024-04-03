@@ -13,6 +13,7 @@ public class PlayerBehaviour : ResourceManager
 
     public GameObject shopPanel;
     public GameObject statsPanel;
+    public GameObject infoPanel;
     public TMP_Text shopHeader, displayScore, displayHealth, displayDamage;
     public int numHealthIncreases = 0, numDamageIncreases = 0;
     public HealthSystem healthSystem;
@@ -57,8 +58,12 @@ public class PlayerBehaviour : ResourceManager
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             TogglePlayerStats();
-            numDamageIncreases = 0;
-            numHealthIncreases = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ToggleInfoPanel();
+
         }
 
         if (statsPanel.activeSelf)
@@ -120,6 +125,11 @@ public class PlayerBehaviour : ResourceManager
     void TogglePlayerStats()
     {
         statsPanel.SetActive(!statsPanel.activeSelf);
+    }
+
+    void ToggleInfoPanel()
+    {
+        infoPanel.SetActive(!infoPanel.activeSelf);
     }
 
     void UpdatePlayerStats() {
