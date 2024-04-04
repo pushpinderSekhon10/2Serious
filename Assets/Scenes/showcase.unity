@@ -51696,6 +51696,14 @@ PrefabInstance:
       propertyPath: player_character
       value: 
       objectReference: {fileID: 1840760726}
+    - target: {fileID: 6244394050799491558, guid: 28237cacc6b065e418eb67275285fb1d, type: 3}
+      propertyPath: m_text
+      value: Health Increase (+3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656645048971740830, guid: 28237cacc6b065e418eb67275285fb1d, type: 3}
+      propertyPath: m_text
+      value: Damage Increase (+1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8263206914455027667, guid: 28237cacc6b065e418eb67275285fb1d, type: 3}
       propertyPath: m_Color.b
       value: 0.21960786
